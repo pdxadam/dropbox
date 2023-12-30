@@ -22,9 +22,13 @@ def mqttPost(postable):
     l = f.readline()[:-1].split(",")
     f.close()
     publish.single(topic, payload=postable, hostname=broker, client_id = "boardPoster", port = port, auth = {'username':l[0], 'password':l[1]} )
-  
+def getToken():
+    f = open("dbToken", "r")
+    l = f.readline()
+    return l
 os.chdir(workingDirectory)
-aToken = "biPCarMw8-4AAAAAAAAAAaqOmZSwg-GOfVzQznE91HHORjs-zVt3Gzrb04WnaF9N"
+aToken = getToken()
+
 destLoc = "/mnt/musicShare/"
 destPath = Path(destLoc)
 print("initializing dropbox")
