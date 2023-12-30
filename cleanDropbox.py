@@ -19,12 +19,12 @@ topic = "homeassistant/dropbox/"
 #os.chdir("/home/pi/Documents/dropbox")
 def mqttPost(postable):
     f = open("mq", "r")
-    l = f.readline()[:-1].split(",")
+    l = f.readline()[:-1].split(",")#strip the newline character before splitting it
     f.close()
     publish.single(topic, payload=postable, hostname=broker, client_id = "boardPoster", port = port, auth = {'username':l[0], 'password':l[1]} )
 def getToken():
     f = open("dbToken", "r")
-    l = f.readline()
+    l = f.readline()[:-1]#strip the newline character I couldn't get rid of in file
     return l
 os.chdir(workingDirectory)
 aToken = getToken()
