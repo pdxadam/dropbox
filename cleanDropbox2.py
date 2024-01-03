@@ -9,7 +9,6 @@ import shelve
 # >>> Next up: make it send two contents: successes and failures. Then the sensors would work better
 #scp to copy via ssh
 workingDirectory = "/home/gandalf/dropboxSweeper"
-workingDirectory = "/Users/amclain/Library/CloudStorage/GoogleDrive-amclain@riverdale.k12.or.us/My Drive/Riverdale/ProgrammingProjects/dropbox"
 #--mqtt variables
 broker = "mchome.local"
 port = 1883
