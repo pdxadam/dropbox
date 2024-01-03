@@ -6,4 +6,6 @@ Go to Dropbox App Console to create your own App. Give it files.content.read and
 Requires dropbox (pip3 install dropbox)
 Requires paho-mqtt (pip3 install paho-mqtt)
 
-The challenge now is that the Dropbox has moved to short-lived tokens, so it can't just sit there and work for months on end the way it used to. I'm not sure there's a good answer to this.
+During implementation of Oauth I switched files to cleanDropbox2.py. It now asks on first run for the app key and app secret. I should be using pkce to remove the need for the secret instead.
+
+
