@@ -3,3 +3,4 @@ credentials.json
 .vscode/settings.json
 dropBoxes.txt
 dbToken
+dbData.*
