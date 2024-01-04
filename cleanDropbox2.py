@@ -124,7 +124,7 @@ for e in result.entries:
 print("Success: " + str(count))
 print("failures: " + str(failCount))
 if ((count + failCount) > 0):
-    mqttPost(msgText)
+    mqttPost(f"Success: {str(count)}. Fails: {str(failCount)} ")
     
 
 
